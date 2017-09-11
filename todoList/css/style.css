@@ -1,0 +1,80 @@
+* {
+	padding:0;
+	margin:0;
+}
+
+body {
+	background-color:#DDA;
+	text-align:center;
+}
+
+h1 {
+	padding:10px;
+	font-size:50px;
+}
+
+button {
+	padding: 0 10px;
+	background-color: #55F;
+	color: white;
+	border-width:1px;
+	border-radius: 10px;
+}
+
+#insert input {
+	margin:10px;
+	width:300px;
+	font-size:30px;
+	height:50px;
+}
+
+#insert button {
+	margin:10px;
+	font-size:30px;
+	height:50px;
+}
+
+
+#todoList {
+	margin:0 auto;
+	padding:10px;
+	width:500px;
+	background-color: white;
+	font-size:25px;
+	border:solid 1px black;
+	border-radius:5px;
+}
+
+#todoList li {
+	margin:10px 20px;
+	list-style-type:none;
+	text-align:left;
+	border-bottom:solid 1px #DDD;
+}
+
+#todoList li input {
+	margin:0 10px;
+}
+
+#todoList li input:checked+span {
+	color:gray;
+	text-decoration:line-through;
+}
+
+#todoList li .close {
+	float: right;
+	color: white;
+	cursor:pointer;
+}
+
+#todoList li .close:hover {
+	color: black;
+}
+
+#control {
+	margin:0 auto;
+}
+
+.hidden {
+	display:none;
+}

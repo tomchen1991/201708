@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>待办事项</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+<body>
+	<h1>待办事项</h1>
+	<div id="insert">
+		<input v-model="message" v-on:keyup.enter="insertTodo" placeholder="请输入新的待办事项"/>
+		<button v-on:click="insertTodo">增加</button>
+	</div>
+	<div id="todoList">
+		<ul>
+			<li v-for="todo in todos" v-bind:class="todo.classObject"> <input type="checkbox" v-model="todo.check"/> <span>{{ todo.text }} </span> <span class="close" v-on:click="deleteThis">×</span></li>
+		</ul>
+		<div id="control">
+			<button v-on:click="showAll">显示所有项目</button>
+			<button v-on:click="showDone">仅显示已完成项目</button>
+			<button v-on:click="showRemain">仅显示未完成项目</button>
+		</div>
+	</div>
+	<script src="js/vue.js"></script>
+	<script src="js/1.js"></script>
+</body>
+</html>
